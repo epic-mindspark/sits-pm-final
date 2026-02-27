@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <!-- Camera Preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Point camera at your prescription"
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCapture"
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:text="📸 Capture"
+            android:textSize="18sp"
+            android:backgroundTint="#1976D2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPickGallery"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:text="🖼️ Pick from Gallery"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textColor="#1976D2" />
+
+    </LinearLayout>
+
+</LinearLayout>

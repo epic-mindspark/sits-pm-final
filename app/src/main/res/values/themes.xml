@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SmartPillBox" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary: Medical Blue -->
+        <item name="colorPrimary">#0D47A1</item>
+        <item name="colorPrimaryVariant">#0A3A8A</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Secondary: Calm Teal -->
+        <item name="colorSecondary">#00796B</item>
+        <item name="colorSecondaryVariant">#004D40</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <!-- Background -->
+        <item name="android:colorBackground">#F8F9FA</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#1A1A2E</item>
+
+        <!-- Error -->
+        <item name="colorError">#C62828</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">#0A3A8A</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="MedicalCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">1dp</item>
+        <item name="strokeColor">#E8EAF0</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardBackgroundColor">#FFFFFF</item>
+    </style>
+
+    <!-- Primary Button -->
+    <style name="MedicalButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">#0D47A1</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- Outline Button -->
+    <style name="MedicalButtonOutline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">#0D47A1</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textColor">#0D47A1</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="TextHeading">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#1A1A2E</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextSubheading">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#5F6368</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextBody">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#3C4043</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+    </style>
+</resources>
