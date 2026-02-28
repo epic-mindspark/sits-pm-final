@@ -1,0 +1,4 @@
+flask
+flask-cors
+apscheduler
+websocket-client

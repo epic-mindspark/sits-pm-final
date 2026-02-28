@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Step 1: Welcome -->
+    <LinearLayout
+        android:id="@+id/stepWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💊"
+            android:textSize="64sp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to MedBox"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your smart medication manager.\nNever miss a dose again."
+            android:textSize="15sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btnGetStarted"
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:text="Get Started"
+            android:textSize="16sp"
+            android:backgroundTint="#1976D2" />
+
+    </LinearLayout>
+
+    <!-- Step 2: Role Selection -->
+    <LinearLayout
+        android:id="@+id/stepRole"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Who are you?"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginBottom="24dp" />
+
+        <RadioGroup
+            android:id="@+id/rgRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/btnRolePatient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🧑 Patient — I take medication"
+                android:textSize="16sp"
+                android:padding="12dp" />
+
+            <RadioButton
+                android:id="@+id/btnRoleCaregiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="👨‍⚕️ Caregiver — I manage someone's medication"
+                android:textSize="16sp"
+                android:padding="12dp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnRoleNext"
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:text="Next"
+            android:textSize="16sp"
+            android:backgroundTint="#1976D2" />
+
+    </LinearLayout>
+
+    <!-- Step 3a: Patient Profile -->
+    <ScrollView
+        android:id="@+id/stepPatientProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient Profile"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvPatientCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Patient Code: ------"
+                android:textSize="16sp"
+                android:textColor="#1976D2"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:background="#E3F2FD"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etPatientName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Your Name"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text" />
+
+            <EditText
+                android:id="@+id/etPatientAge"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Age"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text" />
+
+            <!-- USER INPUT FOR TIMES -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Schedule"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnSetMorningTime"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Set Morning Time (Default 08:00)"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnSetNightTime"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Set Night Time (Default 20:00)"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etEmergencyContact"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Emergency Contact (phone)"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text" />
+
+            <Button
+                android:id="@+id/btnPatientDone"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Complete Setup"
+                android:textSize="16sp"
+                android:backgroundTint="#4CAF50" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Step 3b: Caregiver Profile -->
+    <ScrollView
+        android:id="@+id/stepCaregiverProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Caregiver Profile"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etCaregiverName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Your Name"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text" />
+
+            <EditText
+                android:id="@+id/etLinkPatientCode"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Patient's 6-digit Code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textSize="16sp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text" />
+
+            <Button
+                android:id="@+id/btnCaregiverDone"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Link &amp; Complete Setup"
+                android:textSize="16sp"
+                android:backgroundTint="#4CAF50" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
